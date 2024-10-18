@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hüseyin Baş'ın Edebiyat Sayfası</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4a4e69;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #22223b;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #4a4e69;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+        }
+        .vote-container {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .vote-container h2 {
+            color: #4a4e69;
+        }
+        .vote-button {
+            background-color: #22223b;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .vote-button:hover {
+            background-color: #4a4e69;
+        }
+        .vote-results {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        /* Açılır Pencere Stilleri */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+            max-width: 400px;
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #4a4e69;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .photosection {
+            justify-content: center;
+            display: flex;
+            margin: 20px;
+
+        }
+        .photosection img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Açılır Pencere -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="close-button" onclick="closeModal()">×</button>
+            <p><em>"Ne kadınlar sevdim zaten yoktular..."</em> <br> - Atilla İlhan</p>
+        </div>
+    </div>
+
+    <header>
+        <h1>Hüseyin Baş'ın Edebiyat Sayfası</h1>
+        <p>“İnsan derdinin üstüne kapanıp oturursa deli olur. - Sabahattin Ali”</p>
+    </header>
+
+    <nav>
+        <a href="#anasayfa">Anasayfa</a>
+        <a href="#hakkinda">Hakkında</a>
+        <a href="#iletisim">İletişim</a>
+    </nav>
+
+    <div class="container" id="anasayfa">
+        <div class="post">
+            <h2>İlk Blog yazım: Neden Atilla İlhan?</h2>
+            <p>
+                Atilla İlhan`ın her şiiri bende farklı bir yere sahiptir. Yazdığı şiirleri sanki sırf sadece kendi 
+                sesinden okunabilsin diyerek yazmıştır. Bir başkası tarafından okunduğunda aynı öldürücü etkiye
+                sahip olamayan bu şiirler, bir çok platformda kendi sesinden olmak üzere insanlara sunulmuştur.
+                teknolojinin getirileri ileriki süreçlerde çok daha farklı alanlara kayacaktır ki yapay zekanın getirileri
+                şiir seslendirme alanına da etki edecektir.
+            </p>
+        </div>
+
+        <div class="post">
+            <h2>Favori Yazarlarım ve İlham Kaynaklarım</h2>
+            <p>
+                Başta Atilla İlhan olmak üzere Özdemir Asaf ve Oğuz Atay benim için en değerli yazarlardandır.
+                Yazdıkları ile yıllara damga vuran bu yazarlar, gelecek nesillere kalem yoluyla aktarmışlardır kendilerini.
+                Atilla ilhan soft tarzıyla edebiyata yeni bir soluk getirirken Özdemir Asafın kısa ve net oluşunun yanında
+                Oğuz Atayın karmaşıklığı bir insan modelini tamamlar. yumuşaklık, netlik ancak o netliğin içinde kaybolan
+                karmaşıklık benim gözümde bir insanın 3 temel yapı taşını oluşturur.
+            </p>
+        <div class="post">
+            <h2>Yazar Olmak İçin Kitap Okumak Şart Mıdır?</h2>
+            <p>
+                yazarlık müessesine erişmek zorlu ve yorucu bir yoldan geçmektir. İnsan gelişen ve geliştiren bir
+                varlık olduğu için, her anında bu durumun takipçisi olarak yazması gerekir. Okuma konusuna gelicek olursak,
+                okumak her ne kadar yazmak eylemine destekleyici konumda gözükse de benim nezdimde bu durum bu şekilde değildir.
+                okuyan insan etkilenir. Etkilenen insan sıradanlaşır ve kopyalaşır. Bu yüzden hiç okumamış bir insanın kendi
+                imajını oluşturarak kendine kendi yolunu çizebilir.
+
+            </p>
+        </div>
+    </div>
+    </div>
+    <section class="photosection">
+        <img src="img/download.jpg" alt="Fotoğraf Bulunamadı">
+    </section>
+
+    <div class="container vote-container">
+        <h2>Favori Yazarını Seç!</h2>
+
+        <h3>1. Atilla İlhan mı yoksa Özdemir Asaf mı?</h3>
+        <button class="vote-button" onclick="vote('atilla')">Atilla İlhan</button>
+        <button class="vote-button" onclick="vote('ozdemir')">Özdemir Asaf</button>
+
+        <h3>2. Oğuz Atay mı yoksa Sabahattin Ali mi?</h3>
+        <button class="vote-button" onclick="vote('oguz')">Oğuz Atay</button>
+        <button class="vote-button" onclick="vote('sabahattin')">Sabahattin Ali</button>
+         
+        <div class="vote-results" id="voteResults">
+            Atilla İlhan: 0 oy | Özdemir Asaf: 0 oy<br>
+            Oğuz Atay: 0 oy | Sabahattin Ali: 0 oy
+        </div>
+    </div>
+
+    <div class="container" id="hakkinda">
+        <h2>Hakkında</h2>
+        <p>
+            Lise yıllarından beri Edebiyatla hobi olarak uğraşan ve Mühendislik Öğrencisi olmasına rağmen 
+            ironik bir şekilde idollerini edebiyat dünyasından seçen sıradan bir üniversite öğrencisi.
+        </p>
+    </div>
+
+    <div class="container" id="iletisim">
+        <h2>İletişim</h2>
+        <ul>
+            <li><strong>E-posta:</strong> huseyin_bas04@outlook.com</li>
+            <li><strong>Instagram:</strong> <a href="https://instagram.com/Unkopf/" target="_blank">@Unkopf</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>© 2024 Hüseyin Baş - Edebiyat Sayfası | Tüm Hakları Edebiyat Dünyasına Aittir...
+            [ödev amacıyla hazırlanmıştır]
+        </p>
+    </footer>
+
+    <script>
+        let votes = { atilla: 0, ozdemir: 0, oguz: 0, sabahattin: 0 };
+
+        function vote(author) {
+            votes[author]++;
+            document.getElementById('voteResults').innerHTML =
+                `Atilla İlhan: ${votes.atilla} oy | Özdemir Asaf: ${votes.ozdemir} oy<br>` +
+                `Oğuz Atay: ${votes.oguz} oy | Sabahattin Ali: ${votes.sabahattin} oy`;
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        window.onload = function () {
+            document.getElementById('modal').style.display = 'flex';
+        };
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
